@@ -1,0 +1,227 @@
+/* Galería NFT */
+.nft-gallery {
+  padding: 60px 0;
+  background: var(--darker);
+  position: relative;
+}
+
+.nft-gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.nft-card {
+  background: linear-gradient(145deg, #222, #333);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.nft-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.3);
+}
+
+.nft-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.nft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.nft-card:hover .nft-image img {
+  transform: scale(1.05);
+}
+
+.nft-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.nft-info h3 {
+  color: var(--primary);
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.rarity {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: var(--light);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Estilos de rareza */
+.common {
+  border: 3px solid #b0b0b0;
+  box-shadow: 0 0 10px #b0b0b0;
+}
+.common .rarity {
+  background: #b0b0b0;
+  color: #333;
+}
+
+.uncommon {
+  border: 3px solid #2ecc71;
+  box-shadow: 0 0 15px #2ecc71;
+}
+.uncommon .rarity {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.rare {
+  border: 3px solid #3498db;
+  box-shadow: 0 0 20px #3498db;
+}
+.rare .rarity {
+  background: #3498db;
+  color: #fff;
+}
+
+.epic {
+  border: 3px solid #9b59b6;
+  box-shadow: 0 0 25px #9b59b6;
+}
+.epic .rarity {
+  background: #9b59b6;
+  color: #fff;
+}
+
+.legendary {
+  border: 3px solid #f1c40f;
+  box-shadow: 0 0 30px #f1c40f;
+}
+.legendary .rarity {
+  background: #f1c40f;
+  color: #333;
+}
+
+.mythical {
+  border: 3px solid #e74c3c;
+  box-shadow: 0 0 35px #e74c3c;
+  animation: pulse-glow 2s infinite alternate;
+}
+.mythical .rarity {
+  background: #e74c3c;
+  color: #fff;
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 35px #e74c3c; }
+  to { box-shadow: 0 0 50px #e74c3c; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nft-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .nft-image {
+    height: 400px;
+  }
+}
+
+
+/* Paginación */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.pagination-button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: var(--dark);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+.pagination-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.5);
+}
+
+.pagination-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 10px;
+}
+
+.page-number {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--light);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-number.active,
+.page-number:hover {
+  background: var(--primary);
+  color: var(--dark);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* Ocultar las cartas por defecto */
+.nft-card {
+  display: none;
+}
