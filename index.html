@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Coin - Memecoin Legend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+ 
+</head>
+<body>
+<!-- Efecto de partículas -->
+<div class="particles" id="particles"></div>
+
+<!-- Modales optimizados -->
+<div id="modalComic" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('modalComic')">&times;</span>
+    <h3>Comic Style</h3>
+    <div class="modal-image-container">
+      <img src="img/pabloConCoins.jpg" alt="Comic Style" class="modal-image">
+    </div>
+    <p>Our unique comic style is inspired by the vibrant aesthetics of 80's comic books combined with Pablo's legendary story. Each visual element is carefully crafted to transport you to the golden era of comics.</p>
+    <p>Expect bold colors, dynamic compositions, and unforgettable characters that bring the Pablo Coin universe to life. Our artists have created a distinctive visual language that pays homage to both comic book traditions and crypto culture.</p>
+    <p>Future plans include releasing limited edition NFT comics that expand the Pablo Coin lore.</p>
+    <button class="modal-button" onclick="closeModal('modalComic')">Close</button>
+  </div>
+</div>
+
+<div id="modalTokenomics" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('modalTokenomics')">&times;</span>
+    <h3>Tokenomics</h3>
+    <div class="modal-image-container">
+      <img src="img/pablocoinmem.jpeg" alt="Tokenomics" class="modal-image">
+    </div>
+    <p>Pablo Coin is built on a foundation of fair distribution and community ownership. Here are the key details:</p>
+    <ul>
+      <li><strong>Total Supply:</strong> </li>
+      <li><strong>Liquidity Locked:</strong> 100% for 1 year</li>
+      <li><strong>Tax:</strong> 0% buy/sell</li>
+      <li><strong>Distribution:</strong> 40% Pablo Mines, 15% Staking, 5% dev, 5% Marketing, 30% Presale, 10% Burn</li>
+    </ul>
+    <p>Our tokenomics ensure long-term sustainability while rewarding our loyal community members.</p>
+    <button class="modal-button" onclick="closeModal('modalTokenomics')">Close</button>
+  </div>
+</div>
+
+<div id="modalCartel" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('modalCartel')">&times;</span>
+    <h3>Join the Cartel</h3>
+    <div class="modal-image-container">
+      <img src="img/pabloserio.jpg" alt="Join the Cartel" class="modal-image">
+    </div>
+    <p>Becoming part of the Pablo Cartel means joining the most powerful memecoin community in crypto. Here's what you get:</p>
+    <ul>
+      <li>Exclusive access to Cartel-only events and airdrops</li>
+      <li>Voting rights on project development decisions</li>
+      <li>Early access to NFT drops and partner projects</li>
+      <li>Special Cartel member badge for your social profiles</li>
+    </ul>
+    <p>Our community is growing fast - don't miss your chance to be part of crypto history!</p>
+    <button class="modal-button" onclick="closeModal('modalCartel')">Join Now</button>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <h1>PABLO COIN</h1>
+  </div>
+</header>
+
+<!-- Barra de navegación -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <button class="navbar-toggle" onclick="toggleNavbar()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <ul class="navbar-links" id="navbarLinks">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="nft.html">NFTs</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#contract">Contract</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="main-content">
+      <div class="main-text">
+        <h2>The legend returns</h2>
+        <p>Inspired by Pablo Escobar Gaviria, PABLO COIN brings power, influence, and legacy to the Binance Smart Chain (BSC) network. Pure comic-style fun with a vibrant atmosphere and poster-like energy.</p>
+        <button>Join the Cartel Now</button>
+      </div>
+      <div class="main-image">
+        <img src="img/pabloBilletes.jpg" alt="Pablo Escobar in Comic Style">
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="cards-container">
+      <div class="card" onclick="openModal('modalComic')">
+        <h3>Comic Style</h3>
+        <p>Unique artwork inspired by 80's comic book aesthetics and Pablo's story. Colorful, bold, unforgettable.</p>
+      </div>
+      <div class="card" onclick="openModal('modalTokenomics')">
+        <h3>Tokenomics</h3>
+        <p>Presale + Stealth launch in the network of Binance Smart Chain (Bsc), LP locked, community-driven. 100% decentralized. Built on trust and cartel spirit.</p>
+      </div>
+      <div class="card" onclick="openModal('modalCartel')">
+        <h3>Join the Cartel</h3>
+        <p>Be part of the strongest memecoin family on the blockchain: The Pablo Cartel. Let the legend live on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contract-section" id="contract">
+  <div class="container">
+    <h2 class="section-title">PABLO COIN CONTRACT</h2>
+    <div class="contract-box">
+      <input type="text" id="contractAddress" value="" readonly>
+      <button onclick="copyContract()" class="copy-btn">
+        <i class="far fa-copy"></i> Copy
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="carousel-section" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Pablo Coin Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/pablo2.jpg" alt="Pablo Coin Art 1">
+          <div class="carousel-caption">
+            <h3>Comic Style Art</h3>
+            <p>Inspired by 80's comics</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pablocoinmem.jpeg" alt="Pablo Coin Art 2">
+          <div class="carousel-caption">
+            <h3>Token Design</h3>
+            <p>Official Pablo Coin look</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pabloserio.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>The Legend</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/Griselda blanco del cartel de medellín.jpeg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Griselda blanco del cartel de medellín</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pablo escobar pistolas.jpeg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Pablo Escobar</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pablocool.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Pablo Escobar</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/señora.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Griselda Blanco</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/pablo3.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Pablo Escobar</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/señora2.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Griselda blanco</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/haciendaNapoles.jpg" alt="Pablo Coin Art 3">
+          <div class="carousel-caption">
+            <h3>Hacienda Nápoles</h3>
+            <p>Pablo's iconic style</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+      <div class="carousel-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+        <span class="indicator" onclick="goToSlide(3)"></span>
+        <span class="indicator" onclick="goToSlide(4)"></span>
+        <span class="indicator" onclick="goToSlide(5)"></span>
+        <span class="indicator" onclick="goToSlide(6)"></span>
+        <span class="indicator" onclick="goToSlide(7)"></span>
+        <span class="indicator" onclick="goToSlide(8)"></span>
+        <span class="indicator" onclick="goToSlide(9)"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-item">
+      <h3>What is Pablo Coin?</h3>
+      <p>Pablo Coin is a community-driven memecoin running on the BNB Chain (Bsc) network, inspired by the legend of Pablo Escobar, featuring comic book-style branding and robust tokenomics.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How can I buy Pablo Coin?</h3>
+      <p>You can buy Pablo Coin through our official partners and listed exchanges. Make sure to use our verified links only.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="roadmap">
+  <div class="container">
+    <h2 class="section-title">Roadmap</h2>
+    <div class="roadmap-step">
+      <h3>Phase 1: Launch</h3>
+      <p>Token creation, website launch, initial community building.</p>
+    </div>
+    <div class="roadmap-step">
+      <h3>Phase 2: Growth</h3>
+      <p>Marketing campaigns, exchange listings, partnerships.</p>
+    </div>
+    <div class="roadmap-step">
+      <h3>Phase 3: Expansion</h3>
+      <p>Comic series release, NFT integrations, ecosystem expansion.</p>
+    </div>
+    <div class="roadmap-step">
+      <h3>Phase 4: Nft Game</h3>
+      <p>Pablo Mines' NFT game, coming soon.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Connect with Us</h2>
+    <div class="socials-links">
+      <a href="https://x.com/pabloescob62772" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://t.me/PabloCoin_BNB" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Pablo Coin. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="js/custom.js"></script>
+</body>
+</html>
